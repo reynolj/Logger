@@ -12,3 +12,8 @@ The format is:
   logger.py -f <filename>
 
 This script does not work on websites that redirect you at the start or require you to agree with something prior to login
+
+CODE YOU NEED TO CHANGE:
+In setChromeOptions() change 
+  .add_extension('extension1/2') to fit your needs
+  driver = webdriver.Chrome(... executable_path=r'chromedriver.exe' change 'chromedriver.exe' to match its path

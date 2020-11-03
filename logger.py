@@ -15,7 +15,6 @@ class Log:
 
 
 def main(argv):
-    # file = open("logs.xyz", "r")
     opts = []
     args = []
     try:
@@ -51,14 +50,14 @@ def setChromeOptions():
     chrome_options = webdriver.ChromeOptions()
     # Add extensions below. Make sure you've have the .crx of each extension you want and send .add_extension() its
     # path
-    chrome_options.add_extension('extension1.crx')
+    chrome_options.add_extension('extension1.crx')  # <----- remove or change this
     chrome_options.add_extension('extension2.crx')
     # Suppress silly error
     chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
     # Keep chrome open
     chrome_options.add_experimental_option("detach", True)
     # Change everything after 'r' to be the path of your chromedriver.exe
-    driver = webdriver.Chrome(options=chrome_options, executable_path=r'chromedriver.exe')
+    driver = webdriver.Chrome(options=chrome_options, executable_path=r'chromedriver.exe')  # <----- change this
     return driver
 
 
